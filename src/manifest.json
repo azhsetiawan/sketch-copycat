@@ -1,0 +1,25 @@
+{
+  "name": "Copycat",
+  "identifier": "com.azhsetiawan.sketchplugins.copycat",
+  "compatibleVersion": "58",
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Update Copycat in Artboard",
+      "identifier": "copycat.update-identifier",
+      "script": "./copycat-update.js"
+    },
+    {
+      "name": "Create Copycat in Artboard",
+      "identifier": "copycat.create-identifier",
+      "script": "./copycat-create.js"
+    }
+  ],
+  "menu": {
+    "title": "Copycat",
+    "items": [
+      "copycat.create-identifier",
+      "copycat.update-identifier"
+    ]
+  }
+}

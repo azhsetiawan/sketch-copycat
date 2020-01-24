@@ -1,0 +1,40 @@
+{
+  "name": "sketch-copycat",
+  "version": "1.0.0",
+  "description": "Duplicate layout from Artboard using Layer Style.",
+  "author": "Ashar Setiawan",
+  "license": "MIT",
+  "homepage": "https://github.com/azhsetiawan/sketch-copycat",
+  "engines": {
+    "sketch": ">=49.0"
+  },
+  "skpm": {
+    "name": "Copycat",
+    "main": "copycat.sketchplugin",
+    "manifest": "src/manifest.json",
+    "assets": [
+      "assets/**/*"
+    ]
+  },
+  "scripts": {
+    "build": "skpm-build",
+    "watch": "skpm-build --watch",
+    "start": "skpm-build --watch --run",
+    "postinstall": "npm run build && skpm-link"
+  },
+  "devDependencies": {
+    "@skpm/builder": "^0.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azhsetiawan/sketch-copycat.git"
+  },
+  "keywords": [
+    "sketch",
+    "sketch-plugin",
+    "copycat"
+  ],
+  "bugs": {
+    "url": "https://github.com/azhsetiawan/sketch-copycat/issues"
+  }
+}
