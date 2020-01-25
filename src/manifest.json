@@ -5,21 +5,27 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "Update Copycat in Artboard",
-      "identifier": "copycat.update-identifier",
-      "script": "./copycat-update.js"
+      "name": "Create Copycat in Artboard",
+      "identifier": "copycat.create",
+      "script": "./copycat-create.js",
+      "icon": "runner-icon-create.png",
+      "iconDark": "runner-icon-create-dark.png",
+      "description": "Create hidden #copycat layer in selected Artboard"
     },
     {
-      "name": "Create Copycat in Artboard",
-      "identifier": "copycat.create-identifier",
-      "script": "./copycat-create.js"
+      "name": "Update Copycat in Artboard",
+      "identifier": "copycat.update",
+      "script": "./copycat-update.js",
+      "icon": "runner-icon-update.png",
+      "iconDark": "runner-icon-update-dark.png",
+      "description": "Update hidden #copycat layer in selected Artboard"
     }
   ],
   "menu": {
     "title": "Copycat",
     "items": [
-      "copycat.create-identifier",
-      "copycat.update-identifier"
+      "copycat.create",
+      "copycat.update"
     ]
   }
 }
