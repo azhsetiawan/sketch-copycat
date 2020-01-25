@@ -38,6 +38,7 @@ Download latest release from [here](https://github.com/azhsetiawan/sketch-copyca
 
 ## Changelog
 
+- **1.0.1** - Integrate with Runner
 - **1.0.0** - Initial release
 
 
