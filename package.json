@@ -1,6 +1,6 @@
 {
   "name": "sketch-copycat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Duplicate layout from Artboard using Layer Style.",
   "author": "Ashar Setiawan",
   "license": "MIT",
