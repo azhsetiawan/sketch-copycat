@@ -1,6 +1,13 @@
-# Copycat
-
-Sketch plugin that duplicates layout from Artboard using Layer Style
+<p align="center">
+<img width="160" alt="sketch-copycat-icon" src="https://user-images.githubusercontent.com/3045602/87457088-0b642b80-c632-11ea-8d5c-0d09f82e1695.png">
+</p>
+<h1 align="center">
+  Copycat
+</h1>
+<p align="center">
+  Sketch plugin that duplicates layout from Artboard using Layer Style
+</p>
+<br>
 
 
 ## Installation
@@ -38,6 +45,7 @@ Download latest release from [here](https://github.com/azhsetiawan/sketch-copyca
 
 ## Changelog
 
+- **1.1.0** - Set export scale
 - **1.0.1** - Integrate with Runner
 - **1.0.0** - Initial release
 
@@ -46,13 +54,20 @@ Download latest release from [here](https://github.com/azhsetiawan/sketch-copyca
 
 Tweet your feedback and ideas to me [@azhsetiawan](https://twitter.com/azhsetiawan)
 
+## Support
+
+If you find this plugin helpful, or would like to support me to develop more plugins
+
+[buy me a ☕️](https://www.paypal.me/asharsetiawan)
+
 ## Credits
 
 Credit where credit is due
 
 - [Flatten Plugin for Sketch](https://github.com/einancunlu/Flatten-Plugin-for-Sketch) - for inspirations
 - [Automate Sketch](https://github.com/Ashung/Automate-Sketch) - for inspirations
-- [Alfathony](https://github.com/alfathony) and [nas](https://twitter.com/kurniawan_anas) - for testing my first Sketch plugin
+- [Symbol Instance Renamer](https://github.com/sonburn/symbol-instance-renamer) - for inspirations
+- [alfathony](https://github.com/alfathony) and [nas](https://twitter.com/kurniawan_anas) - for testing my first Sketch plugin
 
 
 ## Copyright
