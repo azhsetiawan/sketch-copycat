@@ -217,6 +217,22 @@ ui.setItems_forPopupButton = function(items, view) {
 };
 
 /**
+ * @param  {Array} title [String]
+ * @param  {NSView} view NSPopUpButton
+ */
+ui.selectItemWithTitle_forPopupButton = function(title, view) {
+    view.selectItemWithTitle(title);
+}
+
+/**
+ * @param  {Array} index [Number]
+ * @param  {NSView} view NSPopUpButton
+ */
+ui.selectItemAtIndex_forPopupButton = function(index, view) {
+    view.selectItemAtIndex(index);
+}
+
+/**
  * @param  {Array} items [String]
  * @param  {Array|Number} size Optional
  * @return  {NSComboBox}
@@ -438,6 +454,24 @@ ui.circle = function(color, size) {
 };
 
 /**
+ * @param  {Array|Number} size Optional
+ * @return  {NSDatePicker}
+ */
+ui.datePicker = function(size) {
+    var frame;
+    if (size && Array.isArray(size)) {
+        frame = this.rect(size);
+    } else {
+        frame = this.rect([0, 0, size || 120 , size || 24]);
+    }
+    var datePicker = NSDatePicker.alloc().initWithFrame(frame);
+    datePicker.setDatePickerStyle(NSTextFieldAndStepperDatePickerStyle);
+    datePicker.setDatePickerElements(NSYearMonthDayDatePickerElementFlag|NSYearMonthDatePickerElementFlag);
+    datePicker.setDateValue(NSDate.date());
+    return datePicker;
+};
+
+/**
  * @param  {String} message
  * @param  {String} info
  * @param  {Number} width Optional default is 300.
@@ -484,6 +518,11 @@ dialog.prototype.addLabel = function(text) {
     var view = ui.textLabel(text, this.width);
     this.views.push(view);
 };
+
+dialog.prototype.addDivider = function() {
+    var view = ui.divider(this.width);
+    this.views.push(view);
+}
 
 /**
  * @return  {Object} { responseCode: 1000 | 1001 | 1002, self: NSAlert }

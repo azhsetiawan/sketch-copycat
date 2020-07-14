@@ -1,5 +1,6 @@
 var sketch = require('sketch/dom')
 var UI = require('sketch/ui')
+var Settings = require('sketch/settings')
 
 var document = sketch.getSelectedDocument()
 var selection = document.selectedLayers
@@ -7,6 +8,10 @@ var selection = document.selectedLayers
 function hasTagged(layer_name) {
   const regex = new RegExp('#copycat-?.+', 'g')
   return regex.test(layer_name)
+}
+
+export function getScale() {
+  return Settings.settingForKey('copycat-scale') || 1
 }
 
 export function checkSelection() {

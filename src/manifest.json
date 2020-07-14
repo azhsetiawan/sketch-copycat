@@ -19,13 +19,34 @@
       "icon": "runner-icon-update.png",
       "iconDark": "runner-icon-update-dark.png",
       "description": "Update hidden #copycat layer in selected Artboard"
-    }
+    },
+    {
+      "name": "Settings",
+      "identifier": "copycat.settings",
+      "script": "./settings.js"
+    },
+    {
+      "name" : "Report Issue",
+      "identifier" : "copycat.issue",
+      "script": "./menu.js",
+      "handler" : "report"
+    },
+    {
+      "name" : "Donate",
+			"identifier" : "copycat.donate",
+			"script" : "./menu.js",
+			"handler" : "donate"
+    }    
   ],
   "menu": {
     "title": "Copycat",
     "items": [
       "copycat.create",
-      "copycat.update"
+      "copycat.update",
+      "-",
+      "copycat.settings",
+      "copycat.issue",
+      "copycat.donate"
     ]
   }
 }

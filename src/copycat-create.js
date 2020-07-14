@@ -1,4 +1,4 @@
-import { checkSelection, checkLastLayerName, loadLocalImage } from './helper/general'
+import { getScale, checkSelection, checkLastLayerName, loadLocalImage } from './helper/general'
 
 var sketch = require('sketch/dom')
 var UI = require('sketch/ui')
@@ -12,6 +12,8 @@ var _ui = require("./helper/dialog").ui;
 var document = sketch.getSelectedDocument()
 var selection = document.selectedLayers
 var selected_artboard = selection.layers[0]
+
+var scale = getScale()
 
 export default function() {
 
@@ -55,10 +57,11 @@ export default function() {
         return
       }
 
-      var export_options = { scales: '1', formats: 'png', 'use-id-for-name': true, 'save-for-web': true }
+      var export_options = { scales: scale, formats: 'png', 'use-id-for-name': true, 'save-for-web': true }
       sketch.export(selected_artboard, export_options)
 
-      var file_path = '~/Documents/Sketch Exports/' + String(artboard_id) + '.png'
+      var atScale = scale == 1 ? '' : `@${scale}x`
+      var file_path = `~/Documents/Sketch Exports/${String(artboard_id)}${atScale}.png`
       var file_abspath = NSString.stringWithString(file_path).stringByExpandingTildeInPath()
 
       var local_image = loadLocalImage(file_abspath)
